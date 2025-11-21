@@ -1,3 +1,4 @@
+'use client'
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ import FAQItem from "../components/faq/FAQItem";
 export default function PolicyPulseLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -64,15 +65,15 @@ export default function PolicyPulseLanding() {
         }
 
         @keyframes checkmark-pop {
-          0% { 
+          0% {
             transform: scale(0);
             opacity: 0;
           }
-          50% { 
+          50% {
             transform: scale(1.2);
             opacity: 1;
           }
-          100% { 
+          100% {
             transform: scale(1);
             opacity: 1;
           }
@@ -85,9 +86,9 @@ export default function PolicyPulseLanding() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center gap-4 group cursor-pointer mr-8">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f17df8c73023ffc77c89e5/1b7e3459b_PolicyRadar3.png" 
-                alt="PolicyRadar Logo" 
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f17df8c73023ffc77c89e5/1b7e3459b_PolicyRadar3.png"
+                alt="PolicyRadar Logo"
                 className="h-20 w-20 transition-all duration-300 ease-in-out group-hover:scale-105"
                 style={{ objectFit: 'contain' }}
               />
@@ -98,22 +99,22 @@ export default function PolicyPulseLanding() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <button 
-                onClick={() => scrollToSection('features')} 
+              <button
+                onClick={() => scrollToSection('features')}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-200 relative group"
               >
                 Features
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
               </button>
-              <button 
-                onClick={() => scrollToSection('pricing')} 
+              <button
+                onClick={() => scrollToSection('pricing')}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-200 relative group"
               >
                 Pricing
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
               </button>
-              <button 
-                onClick={() => scrollToSection('faq')} 
+              <button
+                onClick={() => scrollToSection('faq')}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-200 relative group"
               >
                 FAQ
@@ -128,7 +129,7 @@ export default function PolicyPulseLanding() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
@@ -327,7 +328,7 @@ export default function PolicyPulseLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#1a1a2e] mb-4">
-              The $127K Problem You Don't Know You Have
+              The $127K Problem You Don&apos;t Know You Have
             </h2>
             <p className="text-xl text-gray-600">
               Most companies lose six figures annually to preventable vendor issues
@@ -341,11 +342,11 @@ export default function PolicyPulseLanding() {
               <div className="text-4xl font-bold text-gray-900 mb-2">$47K</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Average Surprise Cost</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                SaaS vendors change pricing 2-3x per year. Most companies find out at renewal—when it's too late to negotiate.
+                SaaS vendors change pricing 2-3x per year. Most companies find out at renewal—when it&apos;s too late to negotiate.
               </p>
               <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
                 <p className="text-sm text-gray-800">
-                  <span className="font-semibold">Real example:</span> Slack raised prices 40% in 2024. A 500-person company's bill jumped from $60K to $84K overnight.
+                  <span className="font-semibold">Real example:</span> Slack raised prices 40% in 2024. A 500-person company&apos;s bill jumped from $60K to $84K overnight.
                 </p>
               </div>
             </div>
@@ -371,11 +372,11 @@ export default function PolicyPulseLanding() {
               <div className="text-4xl font-bold text-gray-900 mb-2">42%</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Miss Cancellation Windows</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Vendors shorten notice periods (90 days → 30 days). You miss the deadline by a week, now you're stuck for another year.
+                Vendors shorten notice periods (90 days → 30 days). You miss the deadline by a week, now you&apos;re stuck for another year.
               </p>
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
                 <p className="text-sm text-gray-800">
-                  <span className="font-semibold">Real example:</span> $120K contract you're not using because you missed notice by 8 days.
+                  <span className="font-semibold">Real example:</span> $120K contract you&apos;re not using because you missed notice by 8 days.
                 </p>
               </div>
             </div>
@@ -485,7 +486,7 @@ export default function PolicyPulseLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              See What You've Been Missing
+              See What You&apos;ve Been Missing
             </h2>
             <p className="text-xl text-gray-600">Real changes detected by PolicyRadar</p>
           </div>
@@ -821,9 +822,9 @@ export default function PolicyPulseLanding() {
             {/* Column 1 */}
             <div className="md:col-span-1">
               <div className="flex items-center gap-3 mb-6 group cursor-pointer">
-                <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f17df8c73023ffc77c89e5/1b7e3459b_PolicyRadar3.png" 
-                  alt="PolicyRadar Logo" 
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68f17df8c73023ffc77c89e5/1b7e3459b_PolicyRadar3.png"
+                  alt="PolicyRadar Logo"
                   className="h-12 w-12 object-contain transition-all duration-300 ease-in-out group-hover:scale-105"
                 />
                 <span className="text-xl font-bold text-white">PolicyRadar</span>
